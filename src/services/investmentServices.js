@@ -11,7 +11,7 @@ const createNewInvestment = (newInvestmentData) => {
     if(newInvestmentData.valor <= 0){
 
         return {
-            sucess: false, message: 'O valor do investimento deve ser maior que zero.'
+            success: false, message: 'O valor do investimento deve ser maior que 0.'
         };
 
     }
@@ -23,14 +23,14 @@ const createNewInvestment = (newInvestmentData) => {
     if(investmentDate>today){
 
         return {
-            sucess: false, message : 'A data do investimento não pode ser no futuro.'
+            success: false, message : 'A data do investimento não pode estar no futuro.'
         };
 
     }
 
     const investment = investmentRepository.create(newInvestmentData);
     return {
-        sucess: true, data: investment
+        success: true, data: investment
     };
 
 };
@@ -41,7 +41,7 @@ const updateInvestment = (id, dataUpdate) =>{
     if(!existingInvestment){
 
         return {
-            sucess: false, message: 'Investimento não encontrado.'
+            success: false, message: 'Investimento não encontrado.'
         };
 
     }
@@ -49,7 +49,7 @@ const updateInvestment = (id, dataUpdate) =>{
     if(dataUpdate.valor !== undefined && dataUpdate<= 0){
 
         return {
-            sucesss: false, message: 'O valor do investimento deve ser maior que zero.'
+            success: false, message: 'O valor do investimento deve ser maior que 0.'
         };
 
     }
@@ -62,29 +62,29 @@ const updateInvestment = (id, dataUpdate) =>{
 
         if (investmentDate > today) {
             return {
-                success: false, message: 'A data do investimento não pode ser no futuro.'
+                success: false, message: 'A data do investimento não pode estar no futuro.'
             };
         }
     }
 
     const updateInvestment = investmentRepository.update(id, dataUpdate);
     return {
-        sucess: true, data: updateInvestment
+        success: true, data: updateInvestment
     };
 
 }
 
 const deleteInvestment = (id)=> {
 
-    const sucess = investmentRepository.remove(id);
-    if(!sucess){
+    const success = investmentRepository.remove(id);
+    if(!success){
 
         return{
-            sucess: false, message: 'Investimento não encontrado.'
+            success: false, message: 'Investimento não encontrado.'
         };
     }
 
-    return{sucess: true, message: 'Investimento removido com sucesso.'};
+    return{success: true, message: 'Investimento removido com sucesso.'};
 
 }
 

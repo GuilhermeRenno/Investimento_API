@@ -11,7 +11,7 @@ const create = (req , res) =>{
     const newInvestmentData = req.body;
     const result  = investmentService.createNewInvestment(newInvestmentData);
 
-    if(!result.sucess){
+    if(!result.success){
 
         return res.status(400).json({message: result.message
 
@@ -29,7 +29,7 @@ const update = (req, res) =>{
     const dataUpdate = req.body;
     const result = investmentService.updateInvestment(id, dataUpdate);
 
-    if(!result.sucess){
+    if(!result.success){
 
         return res.status(404).json({message: result.message});
 
@@ -42,7 +42,7 @@ const remove = (req, res) => {
 
     const {id} = req.params;
     const result = investmentService.deleteInvestment(id);
-    if(!result.sucess){
+    if(!result.success){
 
         return res.status(404).jason({message: result.message});
 
