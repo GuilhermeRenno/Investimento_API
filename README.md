@@ -1,6 +1,6 @@
 # Controle de Investimentos | Back-End (API)
 
-[![Ver Repositório Front-End](https://img.shields.io/badge/Ver-Front--End-2ea44f?style=for-the-badge)](https://github.com/GuilhermeRenno/controle-investimentos-front) 
+[![Ver Repositório Front-End](https://img.shields.io/badge/Ver-Front--End-2ea44f?style=for-the-badge)](https://github.com/GuilhermeRenno/investimentos_FRONT) 
 ## ❯ Sobre o Projeto
 
 Esta é a API back-end da aplicação "Controle de Investimentos". Ela serve como o cérebro do sistema, responsável por gerenciar, validar e persistir todos os dados relacionados aos ativos financeiros.
